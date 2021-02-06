@@ -8,7 +8,6 @@ interface Intref{// functional interface
 
 
 public class LambdaExpression {
-
 	int x = 10;
 	public void m2() {
 		int y = 20;
@@ -16,10 +15,10 @@ public class LambdaExpression {
 		Intref i=()->{//() refers to m1()
 			x+=5;
 			System.out.println(x);//10 always class variable
-//			y+=5; local var are final or effectively final only if I am using it
+//			y+=5; local var are freeze so final or effectively final only if I am using it
 			
 			System.out.println(y);// 20 local variable
-		};
+		};//closure block ended
 		
 		i.m1();
 	}
